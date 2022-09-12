@@ -1,0 +1,116 @@
+/* ___________________________R E S E T  S E C T I O N */
+html,
+body {
+	/* _________________________Variables */
+	--color-primary: rgb(255, 0, 0, 0.55);
+	/* _________________________Styling */
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	font-family: 'Roboto', sans-serif;
+	box-sizing: border-box;
+}
+
+/* ___________________________G L O B A L  S E C T I O N */
+#navbar {
+	margin: 0;
+	display: flex;
+	height: 60px;
+	align-items: center;
+	backdrop-filter: blur(5px);
+	box-shadow: 0 1px 8px rgb(0, 0, 0, 0.2);
+}
+
+#slider {
+	display: flex;
+	position: absolute;
+	top: 0;
+	z-index: -1;
+	height: 550px;
+	left: 0;
+}
+
+.slider-img {
+	width: 100vw;
+  object-fit: cover;
+}
+
+#minigame {
+	float: right;
+	margin-right: 5vw;
+	margin-top: 20px;
+	border-radius: 10%;
+	text-align: right;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  backdrop-filter: blur(5px);
+}
+
+h1 {
+	line-height: 50px;
+	font-size: 60px;
+	font-weight: 900;
+	color: white;
+	backdrop-filter: blur(5px);
+	padding: 20px;
+	border-radius: 20%;
+	margin: 0;
+	text-align: right;
+	border-top: 4px dotted rgba(172, 0, 0, 0.35);
+}
+
+.question-mark {
+	color: var(--color-primary);
+	font-size: 80px;
+}
+
+#responses {
+	display: flex;
+	justify-content: right;
+	width: 30vw;
+	margin: 0;
+	padding: 0;
+}
+
+.response {
+	color: rgb(255, 255, 255);
+	backdrop-filter: blur(5px);
+	padding: 7px;
+	width: 80px;
+	text-align: center;
+	margin-left: 15px;
+	border-radius: 40%;
+	border-bottom: 4px solid rgba(172, 0, 0, 0.8);
+}
+
+/* ___________________________M O B I L E  S E C T I O N */
+@media only screen and (max-width: 768px) {
+	.d {
+		display: none;
+	}
+
+	#burgerbtn {
+    margin-top: 8px;
+	}
+
+	.bar {
+		width: 40px;
+		height: 6px;
+		background-color: var(--color-primary);
+		margin-bottom: 8px;
+		margin-left: 20px;
+	}
+}
+
+/* ___________________________D E S K T O P  S E C T I O N */
+@media only screen and (min-width: 768px) {
+	.m {
+		display: none;
+	}
+
+	#logo {
+		width: 60px;
+		margin-left: 30px;
+	}
+}
