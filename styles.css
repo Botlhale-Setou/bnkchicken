@@ -3,6 +3,7 @@ html,
 body {
 	/* _________________________Variables */
 	--color-primary: rgb(255, 0, 0, 0.55);
+	--color-secondary: rgb(255, 255, 255);
 	/* _________________________Styling */
 	margin: 0;
 	padding: 0;
@@ -21,13 +22,49 @@ body {
 	box-shadow: 0 1px 8px rgb(0, 0, 0, 0.2);
 }
 
+#menu {
+	height: 100vh;
+	position: absolute;
+	width: 100vw;
+  backdrop-filter: blur(7px);
+	background-color: rgb(0, 0, 0,0.4);
+	z-index: 1;
+	left: -100vw;
+	transition-duration: 600ms ;
+}
+
+ul {
+	list-style-type: none;
+	padding-top: 60px;
+}
+
+.menu-li {
+	text-decoration: none;
+	color: var(--color-secondary);
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 120px;
+	margin-left: 10vw;
+	transition-duration: 200ms;
+}
+
+.menu-li:hover {
+	color: var(--color-primary);
+}
+
+.menu-arrow {
+	float: right;
+	margin-right: 20vw;
+}
+
 #slider {
 	display: flex;
 	position: absolute;
 	top: 0;
 	z-index: -1;
-	height: 550px;
+	height: 600px;
 	left: 0;
+	transition-duration: 800ms;
 }
 
 .slider-img {
@@ -44,6 +81,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background-color: rgba(0, 0, 0, 0.048);
   backdrop-filter: blur(5px);
 }
 
@@ -51,13 +89,17 @@ h1 {
 	line-height: 50px;
 	font-size: 60px;
 	font-weight: 900;
-	color: white;
+	color: rgba(247, 247, 247, 0.8);
 	backdrop-filter: blur(5px);
 	padding: 20px;
 	border-radius: 20%;
 	margin: 0;
 	text-align: right;
 	border-top: 4px dotted rgba(172, 0, 0, 0.35);
+	background-image: url('./artwork/slider/05.jpeg');
+	background-size: cover;
+	background-clip: text;
+	-webkit-background-clip: text;
 }
 
 .question-mark {
@@ -74,7 +116,7 @@ h1 {
 }
 
 .response {
-	color: rgb(255, 255, 255);
+	color: var(--color-secondary);
 	backdrop-filter: blur(5px);
 	padding: 7px;
 	width: 80px;
@@ -82,6 +124,25 @@ h1 {
 	margin-left: 15px;
 	border-radius: 40%;
 	border-bottom: 4px solid rgba(172, 0, 0, 0.8);
+	cursor: pointer;
+}
+
+#yes:hover {
+	transition-duration: 350ms;
+	border-bottom: 4px solid var(--color-secondary);
+}
+
+#yes:active {
+	color: var(--color-primary);
+}
+
+#no:hover {
+	transition-duration: 350ms;
+	border-bottom: 4px solid var(--color-secondary);
+}
+
+#no:active {
+	color: var(--color-primary);
 }
 
 /* ___________________________M O B I L E  S E C T I O N */
@@ -92,6 +153,12 @@ h1 {
 
 	#burgerbtn {
     margin-top: 8px;
+		transition-duration: 300ms;
+		cursor: pointer;
+	}
+
+	#burgerbtn:hover .bar {
+		background-color: var(--color-secondary);
 	}
 
 	.bar {
@@ -100,6 +167,19 @@ h1 {
 		background-color: var(--color-primary);
 		margin-bottom: 8px;
 		margin-left: 20px;
+		transition-duration: 300ms;
+	}
+
+	.active #bar1 {
+		transform: translateY(14px) rotate(45deg);
+	}
+
+	.active #bar2 {
+		opacity: 0;
+	}
+
+	.active #bar3 {
+		transform: translateY(-14px) rotate(-45deg);
 	}
 }
 

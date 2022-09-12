@@ -1,7 +1,22 @@
 const btnNo = document.querySelector('#no');
 const slider = document.querySelector('#slider');
+const btnBurger = document.querySelector('#burgerbtn');
+const menu = document.querySelector('#menu');
 
 let indexSlider = 1;
+let active = false;
+
+btnBurger.addEventListener('click', () => {
+  if (active === false) {
+    active = true;
+    menu.style.left = 0;
+    btnBurger.classList.toggle('active');
+  } else {
+    active = false;
+    menu.style.left = '-100vw';
+    btnBurger.classList.toggle('active');
+  }
+});
 
 btnNo.addEventListener('click', () => {
   if (indexSlider === 6) {
