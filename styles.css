@@ -248,6 +248,24 @@ h1 {
 	border-bottom: 4px solid var(--color-primary);
 }
 
+/* ___________________________P R O D U C T S  S E C T I O N */
+#products-sec {
+	border: 2px solid white;
+	position: absolute;
+	top: 100vh;
+	height: 900px;
+	width: 100vw;
+	background-color: white;
+}
+
+#bg {
+	position: absolute;
+	width: 100vw;
+	height: 500px;
+	bottom: 0;
+	object-fit: cover;
+}
+
 /* ___________________________M O B I L E  S E C T I O N */
 @media only screen and (max-width: 768px) {
 	.d {
