@@ -2,14 +2,15 @@
 html,
 body {
 	/* _________________________Variables */
-	--color-primary: rgb(255, 0, 0, 0.55);
+	--color-primary: rgb(140, 172, 0);
 	--color-secondary: rgb(255, 255, 255);
 	/* _________________________Styling */
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
+	overflow-x: hidden;
 	font-family: 'Roboto', sans-serif;
 	box-sizing: border-box;
+	background-color: rgb(58, 0, 0);
 }
 
 /* ___________________________G L O B A L  S E C T I O N */
@@ -20,6 +21,9 @@ body {
 	align-items: center;
 	backdrop-filter: blur(5px);
 	box-shadow: 0 1px 8px rgb(0, 0, 0, 0.2);
+	position: fixed;
+	width: 100vw;
+	z-index: 2;
 }
 
 ul {
@@ -37,12 +41,12 @@ ul {
 	transition-delay: 100ms;
 	transition-duration: 800ms;
 	box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
+	opacity: 60%;
 }
 
 .slider-img {
 	width: 100vw;
   object-fit: cover;
-	border-bottom-left-radius: 20px;
 }
 
 #slider2 {
@@ -63,30 +67,32 @@ ul {
 	float: right;
 	position: absolute;
 	margin-right: 5vw;
-	margin-top: 20px;
+	margin-top: 130px;
 	border-radius: 10%;
 	text-align: right;
 	display: flex;
 	flex-direction: column;
 	right: 5vw;
-	align-items: center;
+	align-items:flex-end;
 	justify-content: center;
-	background-color: rgba(0, 0, 0, 0.048);
-  backdrop-filter: blur(5px);
-	border-top: 4px dotted rgba(172, 0, 0, 0.35);
-	transition-duration: 300ms;
+	/* background-color: rgba(0, 0, 0, 0.1); */
+  /* backdrop-filter: blur(5px); */
+	border-top: 4px solid var(--color-primary);
+	transition-duration: 600ms;
+	transition-timing-function: ease-in;
 }
 
 h1 {
 	line-height: 50px;
-	font-size: 60px;
+	font-size: 100px;
+	margin-top: 50px;
 	font-weight: 900;
 	color: rgba(247, 247, 247, 0.8);
-	padding: 20px;
-	border-radius: 20%;
+	padding-top: 50px;
+	border-radius: 10px;
 	margin: 0;
 	text-align: right;
-	background-image: url('./artwork/slider/05.jpeg');
+	background-image: url('./artwork/products/bg.jpeg');
 	background-size: cover;
 	background-clip: text;
 	-webkit-background-clip: text;
@@ -100,7 +106,8 @@ h1 {
 #responses {
 	display: flex;
 	justify-content: center;
-	margin: 0;
+	margin-top: 20px;
+	margin-right: 30px;
 	padding: 0;
 }
 
@@ -110,11 +117,15 @@ h1 {
 	padding: 7px;
 	width:70px;
 	text-align: center;
-	background-color: rgb(0,0,0,0.1);
+	background-color: rgb(255,255,255,0.2);
 	margin-left: 15px;
 	border-radius: 17px;
 	border-bottom: 4px solid white;
 	cursor: pointer;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #yes:hover {
@@ -138,16 +149,18 @@ h1 {
 #main-contact {
 	position: absolute;
 	left: -100vw;
-	border-top: 4px dotted rgba(255, 0, 0, 0.308);
+	border-top: 4px solid var(--color-primary);
 	background-color: rgb(0, 0, 0, 0.1);
-	transition-duration: 300ms;
+	transition-duration: 800ms;
 	width: 80vw;
 	margin-top: 35px;
 	backdrop-filter: blur(5px);
 	border-radius: 20px;
+	margin-top: 130px;
 	height: 75vh;
 	display:flex;
 	justify-content: center;
+	transition-timing-function:ease-out;
 }
 
 .contact-title {
@@ -191,7 +204,7 @@ h1 {
 	height: 30px;
 	border-radius: 10px;
 	border: none;
-	border-bottom: 2px dotted rgba(255, 0, 0, 0.7);
+	border-bottom: 2px solid rgba(255, 0, 0, 0.7);
 	background-color: rgb(0, 0, 0, 0.3);
 	color: white;
 }
@@ -204,7 +217,7 @@ h1 {
 	height: 30px;
 	border-radius: 10px;
 	border: none;
-	border-bottom: 2px dotted rgba(255, 0, 0, 0.7);
+	border-bottom: 2px solid rgba(255, 0, 0, 0.7);
 	background-color: rgb(0, 0, 0, 0.3);
 	color: white;
 }
@@ -215,7 +228,7 @@ h1 {
 	height: 90px;
 	border-radius: 10px;
 	border: none;
-	border-bottom: 2px dotted rgba(255, 0, 0, 0.7);
+	border-bottom: 2px solid rgba(255, 0, 0, 0.7);
 	background-color: rgb(0, 0, 0, 0.3);
 	color: white;
 }
@@ -227,12 +240,12 @@ h1 {
 	background-color: rgb(0,0,0,0.3);
 	border: none;
 	color: white;
-	border-bottom: 5px solid rgba(255, 255, 255);
+	border-bottom: 4px solid rgba(255, 255, 255);
 	border-radius: 8px;
 }
 
 #btnsubmit:hover {
-	border-bottom: 5px solid rgba(206, 0, 0, 0.897);
+	border-bottom: 4px solid var(--color-primary);
 }
 
 /* ___________________________M O B I L E  S E C T I O N */
@@ -280,6 +293,7 @@ h1 {
 		background-color: rgb(0, 0, 0,0.4);
 		z-index: 1;
 		left: -100vw;
+		top: 0;
 		transition-duration: 600ms ;
 	}
 
