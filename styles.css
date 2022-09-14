@@ -4,13 +4,14 @@ body {
 	/* _________________________Variables */
 	--color-primary: rgb(140, 172, 0);
 	--color-secondary: rgb(255, 255, 255);
+	--color-tertiary: rgb(58, 0, 0);
 	/* _________________________Styling */
 	margin: 0;
 	padding: 0;
 	overflow-x: hidden;
 	font-family: 'Roboto', sans-serif;
 	box-sizing: border-box;
-	background-color: rgb(58, 0, 0);
+	background-color: var(--color-tertiary);
 }
 
 /* ___________________________G L O B A L  S E C T I O N */
@@ -56,6 +57,8 @@ ul {
 	z-index: -2;
 	height: 30vh;
 	transition-duration: 800ms;
+	box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
+	border-bottom: 3px solid var(--color-primary);
 }
 
 .slider2-img {
@@ -256,6 +259,8 @@ h1 {
 	height: 900px;
 	width: 100vw;
 	background-color: white;
+	z-index: -3;
+	margin-top: 60px;
 }
 
 #bg {
@@ -266,6 +271,103 @@ h1 {
 	object-fit: cover;
 	opacity: 40%;
 }
+
+#products-title-container {
+	height: fit-content;
+	background-image: url('./artwork/products/bg.jpeg');
+	background-size: 100vw;
+	background-position-y: -100px;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+}
+
+#products-title {
+	padding: 15px 0 15px 0;
+	text-align: center;
+	font-size: 40px;
+	color: var(--color-secondary);
+	width: fit-content;
+	border-bottom: 4px solid var(--color-primary);
+	border-radius: 15px;
+}
+
+.products-forward {
+	border: 2px solid green;
+	margin-top: 0;
+	height: 190px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 30px;
+	margin-bottom: 0;
+}
+
+#next {
+	position: absolute;
+	margin-right: 10vw;
+	right: 0;
+	border: 2px solid red;
+  width: 80px;
+	height: 80px;
+  font-size: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#products {
+	display: flex;
+}
+
+.product-card {
+	border: 2px solid red;
+	margin: 0 10vw 0 10vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 80vw;
+	transition-duration: 600ms;
+}
+
+.p-name {
+	border: 1px solid blue;
+	margin: 0;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.p-bdesc {
+	border: 1px solid blue;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.p-price {
+	border: 1px solid blue;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.p-img {
+	border: 1px solid blue;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 300px;
+	width: 80vw;
+	object-fit: cover;
+}
+
 
 /* ___________________________M O B I L E  S E C T I O N */
 @media only screen and (max-width: 768px) {

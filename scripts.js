@@ -7,9 +7,12 @@ const menu = document.querySelector('#menu');
 const contact = document.querySelector('#main-contact');
 const minigame = document.querySelector('#minigame');
 const btnX = document.querySelector('#btnX');
+const productsSec = document.querySelector('#products-sec');
+const next = document.querySelector('#next');
 
 let indexSlider = 1;
 let indexSlider2 = 1;
+let indexProducts = 1;
 let active = false;
 
 const dataMod = {
@@ -19,6 +22,53 @@ const dataMod = {
   price: [90, 90, 90, 90, 90, 'Variable pricing'],
   images: ['./artwork/products/'],
 };
+
+productsSec.innerHTML = `
+<img src="./artwork/products/bg.jpeg" alt="Background buns!" id="bg">
+		<div class="" id="products-title-container">
+			<h2 class="" id="products-title">Products</h2>
+    </div>
+		<p class="products-forward" id="products-forward">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci amet laudantium officia optio harum quidem perspiciatis aliquid fugit ipsum vel!</p>
+		<div id="next">></div>
+		<section class="" id="products">
+			<article class="product-card">
+				<h3 class="p-name" id="p-name1">Meat</h3>
+				<p class="p-bdesc" id="p-bdesc1">Meat brief description</p>
+				<p class="p-price" id="p-price1">Rxx.xx</p>
+				<img src="./artwork/logo.png" alt="" class="p-img" id="p-img1">
+			</article>
+			<article class="product-card">
+				<h3 class="p-name" id="p-name2">Meat</h3>
+				<p class="p-bdesc" id="p-bdesc2">Meat brief description</p>
+				<p class="p-price" id="p-price2">Rxx.xx</p>
+				<img src="./artwork/logo.png" alt="" class="p-img" id="p-img2">
+			</article>
+			<article class="product-card">
+				<h3 class="p-name" id="p-name3">Meat</h3>
+				<p class="p-bdesc" id="p-bdesc3">Meat brief description</p>
+				<p class="p-price" id="p-price3">Rxx.xx</p>
+				<img src="./artwork/logo.png" alt="" class="p-img" id="p-img3">
+			</article>
+			<article class="product-card">
+				<h3 class="p-name" id="p-name4">Meat</h3>
+				<p class="p-bdesc" id="p-bdesc4">Meat brief description</p>
+				<p class="p-price" id="p-price4">Rxx.xx</p>
+				<img src="./artwork/logo.png" alt="" class="p-img" id="p-img4">
+			</article>
+			<article class="product-card">
+				<h3 class="p-name" id="p-name5">Meat</h3>
+				<p class="p-bdesc" id="p-bdesc5">Meat brief description</p>
+				<p class="p-price" id="p-price5">Rxx.xx</p>
+				<img src="./artwork/logo.png" alt="" class="p-img" id="p-img5">
+			</article>
+			<article class="product-card">
+				<h3 class="p-name" id="p-name6">Meat</h3>
+				<p class="p-bdesc" id="p-bdesc6">Meat brief description</p>
+				<p class="p-price" id="p-price6">Rxx.xx</p>
+				<img src="./artwork/logo.png" alt="" class="p-img" id="p-img6">
+			</article>
+		</section>
+`;
 
 btnBurger.addEventListener('click', () => {
   if (active === false) {
@@ -112,4 +162,8 @@ bntYes.addEventListener('click', () => {
 btnX.addEventListener('click', () => {
   contact.style.left = '-80vw';
   minigame.style.right = 0;
+});
+
+next.addEventListener('click', () => {
+  
 });
