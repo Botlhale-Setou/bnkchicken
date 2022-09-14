@@ -8,7 +8,7 @@ body {
 	/* _________________________Styling */
 	margin: 0;
 	padding: 0;
-	overflow-x: hidden;
+	/* overflow-x: hidden; */
 	font-family: 'Roboto', sans-serif;
 	box-sizing: border-box;
 	background-color: var(--color-tertiary);
@@ -253,7 +253,6 @@ h1 {
 
 /* ___________________________P R O D U C T S  S E C T I O N */
 #products-sec {
-	border: 2px solid white;
 	position: absolute;
 	top: 100vh;
 	height: 900px;
@@ -293,7 +292,6 @@ h1 {
 }
 
 .products-forward {
-	border: 2px solid green;
 	margin-top: 0;
 	height: 190px;
 	text-align: center;
@@ -308,21 +306,25 @@ h1 {
 	position: absolute;
 	margin-right: 10vw;
 	right: 0;
-	border: 2px solid red;
   width: 80px;
 	height: 80px;
-  font-size: 30px;
+  font-size: 50px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	z-index: 3;
+	cursor: pointer;
 }
 
-#products {
+#products-slider {
+	position: absolute;
 	display: flex;
+	width: max-content;
+	left: 0;
+	transition: 600ms;
 }
 
 .product-card {
-	border: 2px solid red;
 	margin: 0 10vw 0 10vw;
 	display: flex;
 	flex-direction: column;
@@ -330,10 +332,10 @@ h1 {
 	justify-content: center;
 	width: 80vw;
 	transition-duration: 600ms;
+	left: -50vw;
 }
 
 .p-name {
-	border: 1px solid blue;
 	margin: 0;
 	height: 80px;
 	display: flex;
@@ -342,7 +344,6 @@ h1 {
 }
 
 .p-bdesc {
-	border: 1px solid blue;
 	margin: 0;
 	display: flex;
 	align-items: center;
@@ -350,7 +351,6 @@ h1 {
 }
 
 .p-price {
-	border: 1px solid blue;
 	margin: 0;
 	display: flex;
 	align-items: center;
@@ -358,7 +358,6 @@ h1 {
 }
 
 .p-img {
-	border: 1px solid blue;
 	margin: 0;
 	display: flex;
 	align-items: center;

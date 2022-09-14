@@ -7,8 +7,8 @@ const menu = document.querySelector('#menu');
 const contact = document.querySelector('#main-contact');
 const minigame = document.querySelector('#minigame');
 const btnX = document.querySelector('#btnX');
-const productsSec = document.querySelector('#products-sec');
 const next = document.querySelector('#next');
+const products = document.querySelector('#products-slider');
 
 let indexSlider = 1;
 let indexSlider2 = 1;
@@ -23,51 +23,43 @@ const dataMod = {
   images: ['./artwork/products/'],
 };
 
-productsSec.innerHTML = `
-<img src="./artwork/products/bg.jpeg" alt="Background buns!" id="bg">
-		<div class="" id="products-title-container">
-			<h2 class="" id="products-title">Products</h2>
-    </div>
-		<p class="products-forward" id="products-forward">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci amet laudantium officia optio harum quidem perspiciatis aliquid fugit ipsum vel!</p>
-		<div id="next">></div>
-		<section class="" id="products">
-			<article class="product-card">
-				<h3 class="p-name" id="p-name1">Meat</h3>
-				<p class="p-bdesc" id="p-bdesc1">Meat brief description</p>
-				<p class="p-price" id="p-price1">Rxx.xx</p>
-				<img src="./artwork/logo.png" alt="" class="p-img" id="p-img1">
-			</article>
-			<article class="product-card">
-				<h3 class="p-name" id="p-name2">Meat</h3>
-				<p class="p-bdesc" id="p-bdesc2">Meat brief description</p>
-				<p class="p-price" id="p-price2">Rxx.xx</p>
-				<img src="./artwork/logo.png" alt="" class="p-img" id="p-img2">
-			</article>
-			<article class="product-card">
-				<h3 class="p-name" id="p-name3">Meat</h3>
-				<p class="p-bdesc" id="p-bdesc3">Meat brief description</p>
-				<p class="p-price" id="p-price3">Rxx.xx</p>
-				<img src="./artwork/logo.png" alt="" class="p-img" id="p-img3">
-			</article>
-			<article class="product-card">
-				<h3 class="p-name" id="p-name4">Meat</h3>
-				<p class="p-bdesc" id="p-bdesc4">Meat brief description</p>
-				<p class="p-price" id="p-price4">Rxx.xx</p>
-				<img src="./artwork/logo.png" alt="" class="p-img" id="p-img4">
-			</article>
-			<article class="product-card">
-				<h3 class="p-name" id="p-name5">Meat</h3>
-				<p class="p-bdesc" id="p-bdesc5">Meat brief description</p>
-				<p class="p-price" id="p-price5">Rxx.xx</p>
-				<img src="./artwork/logo.png" alt="" class="p-img" id="p-img5">
-			</article>
-			<article class="product-card">
-				<h3 class="p-name" id="p-name6">Meat</h3>
-				<p class="p-bdesc" id="p-bdesc6">Meat brief description</p>
-				<p class="p-price" id="p-price6">Rxx.xx</p>
-				<img src="./artwork/logo.png" alt="" class="p-img" id="p-img6">
-			</article>
-		</section>
+products.innerHTML = `
+<div class="product-card">
+  <h3 class="p-name" id="p-name1">${dataMod.name[0]}</h3>
+  <p class="p-bdesc" id="p-bdesc1">${dataMod.briefDesc[0]}</p>
+  <p class="p-price" id="p-price1">${dataMod.price[0]}</p>
+  <img src="${dataMod.images[0]}" alt="" class="p-img" id="p-img1">
+</div>
+<div class="product-card">
+  <h3 class="p-name" id="p-name1">${dataMod.name[1]}</h3>
+  <p class="p-bdesc" id="p-bdesc1">${dataMod.briefDesc[1]}</p>
+  <p class="p-price" id="p-price1">${dataMod.price[1]}</p>
+  <img src="${dataMod.images[1]}" alt="" class="p-img" id="p-img1">
+</div>
+<div class="product-card">
+  <h3 class="p-name" id="p-name1">${dataMod.name[2]}</h3>
+  <p class="p-bdesc" id="p-bdesc1">${dataMod.briefDesc[2]}</p>
+  <p class="p-price" id="p-price1">${dataMod.price[2]}</p>
+  <img src="${dataMod.images[2]}" alt="" class="p-img" id="p-img1">
+</div>
+<div class="product-card">
+  <h3 class="p-name" id="p-name1">${dataMod.name[3]}</h3>
+  <p class="p-bdesc" id="p-bdesc1">${dataMod.briefDesc[3]}</p>
+  <p class="p-price" id="p-price1">${dataMod.price[3]}</p>
+  <img src="${dataMod.images[3]}" alt="" class="p-img" id="p-img1">
+</div>
+<div class="product-card">
+  <h3 class="p-name" id="p-name1">${dataMod.name[4]}</h3>
+  <p class="p-bdesc" id="p-bdesc1">${dataMod.briefDesc[4]}</p>
+  <p class="p-price" id="p-price1">${dataMod.price[4]}</p>
+  <img src="${dataMod.images[4]}" alt="" class="p-img" id="p-img1">
+</div>
+<div class="product-card">
+  <h3 class="p-name" id="p-name1">${dataMod.name[5]}</h3>
+  <p class="p-bdesc" id="p-bdesc1">${dataMod.briefDesc[5]}</p>
+  <p class="p-price" id="p-price1">${dataMod.price[5]}</p>
+  <img src="${dataMod.images[5]}" alt="" class="p-img" id="p-img1">
+</div>
 `;
 
 btnBurger.addEventListener('click', () => {
@@ -165,5 +157,31 @@ btnX.addEventListener('click', () => {
 });
 
 next.addEventListener('click', () => {
-  
+  if (indexProducts === 6) {
+    indexProducts = 1;
+  } else {
+    indexProducts += 1;
+  }
+  switch (indexProducts) {
+    case 1:
+      products.style.left = '0';
+      break;
+    case 2:
+      products.style.left = '-100vw';
+      break;
+    case 3:
+      products.style.left = '-200vw';
+      break;
+    case 4:
+      products.style.left = '-300vw';
+      break;
+    case 5:
+      products.style.left = '-400vw';
+      break;
+    case 6:
+      products.style.left = '-500vw';
+      break;
+    default:
+      break;
+  }
 });
