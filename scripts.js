@@ -20,7 +20,7 @@ const dataMod = {
   briefDesc: ['Fresh full chicken 2kg+', 'Thigh combo pack', 'Wing combo pack', 'Fillet combo pack', 'Drumstick combo pack', 'Other products...'],
   desc: ['Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.'],
   price: [90, 90, 90, 90, 90, 'Variable pricing'],
-  images: ['./artwork/products/'],
+  images: ['./artwork/products/fullchicken1.jpeg', './artwork/products/thighs.jpeg', './artwork/products/wings.jpeg', './artwork/products/fillets.jpeg', './artwork/products/drumsticks.jpeg', './artwork/products/misc.jpeg'],
 };
 
 products.innerHTML = `

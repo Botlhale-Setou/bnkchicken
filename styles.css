@@ -8,10 +8,14 @@ body {
 	/* _________________________Styling */
 	margin: 0;
 	padding: 0;
-	/* overflow-x: hidden; */
+	overflow-x: hidden;
 	font-family: 'Roboto', sans-serif;
 	box-sizing: border-box;
 	background-color: var(--color-tertiary);
+}
+
+* {
+	overflow-x: hidden;
 }
 
 /* ___________________________G L O B A L  S E C T I O N */
