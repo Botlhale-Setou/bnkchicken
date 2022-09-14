@@ -87,13 +87,13 @@ h1 {
 	font-size: 100px;
 	margin-top: 50px;
 	font-weight: 900;
-	color: rgba(247, 247, 247, 0.8);
+	color: rgba(247, 247, 247, 0.7);
 	padding-top: 50px;
 	border-radius: 10px;
 	margin: 0;
 	text-align: right;
-	background-image: url('./artwork/products/bg.jpeg');
-	background-size: cover;
+	background-image: url('./artwork/slider2/04.jpeg');
+	background-size:20%;
 	background-clip: text;
 	-webkit-background-clip: text;
 }
@@ -264,6 +264,7 @@ h1 {
 	height: 500px;
 	bottom: 0;
 	object-fit: cover;
+	opacity: 40%;
 }
 
 /* ___________________________M O B I L E  S E C T I O N */
